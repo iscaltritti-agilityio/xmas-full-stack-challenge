@@ -1,0 +1,23 @@
+{
+  "name": "xmas-full-stack-challenge",
+  "version": "1.0.0",
+  "description": "Christmas Full Stack Developer Challenge - Help Santa's elves track toy production",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "setup": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "setup:node": "npm run setup",
+    "setup:python": "npm install && cd frontend && npm install && cd ../backend-python && pip install -r requirements.txt",
+    "backend:node": "cd backend && npm run dev",
+    "backend:python": "python backend-python/run.py",
+    "frontend": "cd frontend && npm run dev",
+    "start": "concurrently \"npm run backend:node\" \"npm run frontend\"",
+    "start:node": "npm start",
+    "start:python": "concurrently \"npm run backend:python\" \"npm run frontend\""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+

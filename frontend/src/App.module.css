@@ -1,0 +1,11 @@
+.headerActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.logoutButton {
+  background: #fee2e2 !important;
+  color: #c41e3a !important;
+  border-color: #fecaca !important;
+}
+

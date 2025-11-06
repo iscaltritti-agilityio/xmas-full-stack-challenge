@@ -1,0 +1,105 @@
+.modalContent {
+  max-width: 440px;
+}
+
+.modalHeader {
+  margin-bottom: 1.5rem;
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+}
+
+.orderInfo {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid #d4af37;
+}
+
+.orderInfoLabel {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.orderInfoToy {
+  font-size: 1rem;
+  color: #111827;
+  font-weight: 600;
+}
+
+.orderInfoChild {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.elfList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.elfButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  justify-content: flex-start;
+  transition: all 0.2s;
+}
+
+.avatarImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #d4af37;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.avatarImage.current {
+  border: 2px solid #fff;
+}
+
+.avatarInitials {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border: 2px solid #d4af37;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.avatarInitials.current {
+  background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+  color: #165b33;
+  border: 2px solid #fff;
+}
+
+.elfName {
+  flex: 1;
+  text-align: left;
+  font-weight: 600;
+}
+
+.currentBadge {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
