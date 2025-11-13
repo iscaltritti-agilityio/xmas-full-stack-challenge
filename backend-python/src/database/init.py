@@ -132,19 +132,6 @@ def _insert_sample_data():
             'niceListScore': 85
         },
         {
-            'id': '3',
-            'childName': 'Sofia Rodriguez',
-            'age': 5,
-            'location': 'Madrid, Spain',
-            'toy': 'Classic Wooden Train with 12 Cars',
-            'category': 'Wooden Trains',
-            'assignedElf': 'Jingleberry Sparkletoes',
-            'status': 'Quality Check',
-            'dueDate': '2024-12-24',
-            'notes': 'Deer Santa, I want a Clasic Wooden Trane with 12 Cars pleese! I luv tranes so much! Can you paynt it with prety culurs? Thank you Santa! Sofia',
-            'niceListScore': 100
-        },
-        {
             'id': '4',
             'childName': 'Oliver Smith',
             'age': 8,
