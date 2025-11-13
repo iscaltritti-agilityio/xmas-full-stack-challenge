@@ -76,25 +76,32 @@ function loadImageAsBase64(imageName: string): string | null {
   }
 }
 
+function getLocalDateString(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
 function insertSampleData() {
   const now = new Date();
   const elfProfiles = [
     {
       name: 'Jingleberry Sparkletoes',
       specialty: 'Wooden Trains',
-      service_start_date: new Date(now.getFullYear() - 127, 11, 1).toISOString().split('T')[0],
+      service_start_date: getLocalDateString(new Date(now.getFullYear() - 127, 11, 1)),
       profile_image: loadImageAsBase64('Jingleberry.jpeg')
     },
     {
       name: 'Snowflake Tinselwhisk',
       specialty: 'Teddy Bears',
-      service_start_date: new Date(now.getFullYear() - 43, 11, 15).toISOString().split('T')[0],
+      service_start_date: getLocalDateString(new Date(now.getFullYear() - 43, 11, 15)),
       profile_image: loadImageAsBase64('Snowflake.jpeg')
     },
     {
       name: 'Peppermint Candycane',
       specialty: 'Video Games',
-      service_start_date: new Date(now.getFullYear() - 15, 0, 10).toISOString().split('T')[0],
+      service_start_date: getLocalDateString(new Date(now.getFullYear() - 15, 0, 10)),
       profile_image: loadImageAsBase64('Peppermint.jpeg')
     }
   ];

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { DEFAULT_SPECIALTY } from '../constants';
+import { getLocalDateString } from '../utils/helpers';
 import styles from './ElfLogin.module.css';
 
 interface ElfLoginProps {
@@ -72,7 +73,7 @@ export function ElfLogin({ onLogin }: ElfLoginProps) {
         body: JSON.stringify({
           name,
           specialty: DEFAULT_SPECIALTY,
-          service_start_date: new Date().toISOString().split('T')[0]
+          service_start_date: getLocalDateString()
         }),
       });
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getInitials, calculateYearsOfService, formatDate } from '../utils/helpers';
+import { getInitials, calculateYearsOfService, formatDate, parseLocalDate } from '../utils/helpers';
 import { compressImage } from '../utils/imageCompression';
 import { TOY_SPECIALTIES } from '../constants';
 import type { ElfProfile } from '../types';
@@ -51,13 +51,15 @@ export function ElfProfile({ elfName, isEditing, setIsEditing, onProfileUpdate }
     setLoading(true);
     setError(null);
     
-    const startDate = new Date(formData.service_start_date);
+    const startDate = parseLocalDate(formData.service_start_date);
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    startDate.setHours(0, 0, 0, 0);
+
+    console.log('startDate', startDate);
+    console.log('today', today);
     
     if (startDate < today) {
-      setError('Service start date must be a valid date in the past or today');
+      setError('Service start date cannot be in the future');
       setLoading(false);
       return;
     }

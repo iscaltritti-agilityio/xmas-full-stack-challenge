@@ -17,6 +17,13 @@ interface ToyCountRow {
   count: number;
 }
 
+const getLocalDateString = (date: Date = new Date()): string => {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
 const getElfProfileWithToyCount = (name: string): Promise<any> => {
   return new Promise((resolve, reject) => {
     sqlDb.get('SELECT * FROM elf_profiles WHERE name = ?', [name], (err, row: ElfProfileRow | undefined) => {
@@ -69,7 +76,7 @@ apiRoutes.post('/elf', async (req, res) => {
     return res.status(400).json({ error: 'Name is required' });
   }
 
-  const startDate = service_start_date || new Date().toISOString().split('T')[0];
+  const startDate = service_start_date || getLocalDateString();
 
   sqlDb.run(`
     INSERT INTO elf_profiles (name, specialty, service_start_date, profile_image) 
