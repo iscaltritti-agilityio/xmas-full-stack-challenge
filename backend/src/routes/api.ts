@@ -50,7 +50,7 @@ const getElfProfileWithToyCount = (name: string): Promise<any> => {
 };
 
 apiRoutes.get('/elves', (req, res) => {
-  sqlDb.all('SELECT name FROM elf_profiles ORDER BY name', (err, rows) => {
+  sqlDb.all('SELECT name, profile_image FROM elf_profiles ORDER BY name', (err, rows) => {
     if (err) {
       return res.status(500).json({ error: err.message });
     }

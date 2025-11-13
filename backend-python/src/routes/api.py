@@ -47,7 +47,7 @@ async def get_elves():
     cursor = sql_db.cursor()
     
     try:
-        cursor.execute('SELECT name FROM elf_profiles ORDER BY name')
+        cursor.execute('SELECT name, profile_image FROM elf_profiles ORDER BY name')
         rows = cursor.fetchall()
         return rows
     except sqlite3.Error as e:

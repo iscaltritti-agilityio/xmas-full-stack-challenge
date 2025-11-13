@@ -9,6 +9,7 @@ interface ElfLoginProps {
 
 interface ElfName {
   name: string;
+  profile_image?: string | null;
 }
 
 export function ElfLogin({ onLogin }: ElfLoginProps) {
@@ -157,7 +158,14 @@ export function ElfLogin({ onLogin }: ElfLoginProps) {
                       className="combobox-option"
                       onClick={() => handleElfSelect(elf.name)}
                     >
-                      {elf.name}
+                      {elf.profile_image && (
+                        <img 
+                          src={elf.profile_image} 
+                          alt={elf.name}
+                          className={styles.elfAvatar}
+                        />
+                      )}
+                      <span>{elf.name}</span>
                     </div>
                   ))}
                   

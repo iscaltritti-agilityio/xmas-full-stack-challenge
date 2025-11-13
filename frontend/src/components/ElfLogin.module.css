@@ -22,3 +22,12 @@
   color: #166534;
 }
 
+.elfAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.75rem;
+  border: 2px solid #e5e7eb;
+}
+
