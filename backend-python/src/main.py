@@ -8,8 +8,8 @@ from strawberry.fastapi import GraphQLRouter
 import uvicorn
 
 from .database.init import init_database
-from .routes.api import api_router
-from .graphql.schema import schema
+from .api.elves import api_router
+from .api.toys import schema
 
 app = FastAPI()
 

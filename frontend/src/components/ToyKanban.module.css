@@ -39,6 +39,9 @@
   position: relative;
   cursor: pointer;
   align-self: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
 }
 
 .avatarImage {

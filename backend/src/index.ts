@@ -4,8 +4,8 @@ import http from 'http';
 import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@as-integrations/express4';
 import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
-import { typeDefs, resolvers } from './graphql/schema';
-import { apiRoutes } from './routes/api';
+import { typeDefs, resolvers } from './api/toys';
+import { apiRoutes } from './api/elves';
 import { initDatabase } from './database/init';
 
 const app = express();

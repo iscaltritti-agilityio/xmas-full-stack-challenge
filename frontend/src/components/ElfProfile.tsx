@@ -54,9 +54,6 @@ export function ElfProfile({ elfName, isEditing, setIsEditing, onProfileUpdate }
     const startDate = parseLocalDate(formData.service_start_date);
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-
-    console.log('startDate', startDate);
-    console.log('today', today);
     
     if (startDate < today) {
       setError('Service start date cannot be in the future');
