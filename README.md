@@ -64,7 +64,7 @@ Mrs. Claus keeps accidentally reassigning toys (she's practically blind) and wan
 **Acceptance Criteria:**
 - Users can undo toy order updates
 - The interface displays what would be undone before undoing
-Note: **You decide how many levels of undo, and type of updates can be undone**
+- You decide how many levels of undo, and what can be undone
 
 **Before you start coding:**
 
